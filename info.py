@@ -13,9 +13,9 @@ def is_enabled(value, default):
 # Bot information
 
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ.get('API_ID', ''))
-API_HASH = environ.get('API_HASH', '')
-BOT_TOKEN = environ.get('BOT_TOKEN', "")
+API_ID = int(environ.get('API_ID', '17865810'))
+API_HASH = environ.get('API_HASH', 'fabc74f91bf809a4bce6b65dd7034ae9')
+BOT_TOKEN = environ.get('BOT_TOKEN', "5390576577:AAEcGNW-dZCAtKrUZUmNzNJkTLB15kPMPv4")
 
 # Bot settings
 
@@ -27,7 +27,7 @@ PICS = (environ.get('PICS', 'https://te.legra.ph/file/1d0a2c18fe400858da722.jpg'
 
 # Admins, Channels & Users
 
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1199646357').split()]
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
@@ -37,13 +37,13 @@ AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_chan
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "")
-DATABASE_NAME = environ.get('DATABASE_NAME', "")
-COLLECTION_NAME = environ.get('COLLECTION_NAME', '')
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://fznkd:fznkd@cluster0.wifumu3.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_NAME = environ.get('DATABASE_NAME', "TamilRockersMovies")
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Ajax_Files')
 
 # Others
 
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', ''))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001799864083'))
 
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'TamilanMoviesChat')
 
@@ -101,6 +101,6 @@ AUTO_DELETE_SECONDS = int(environ.get('AUTO_DELETE_SECONDS', 300))
 
 FILE_REQ_CHANNEL = int(environ.get('FILE_REQ_CHANNEL', -1001844817928))
 
-SHORTNER_SITE = environ.get("SHORTNER_SITE", "")
+SHORTNER_SITE = environ.get("SHORTNER_SITE", "dalink.in")
 
-SHORTNER_API = environ.get("SHORTNER_API", "")
+SHORTNER_API = environ.get("SHORTNER_API", "d4a9a9164fd0b831e25d8f17a6d36bfbee8deb4e")
